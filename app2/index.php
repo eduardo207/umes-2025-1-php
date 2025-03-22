@@ -89,8 +89,42 @@
             $numero = $numero + 1;
         }while ($numero <=30);
 
+    
+        /*
+            Imprimir en pantalla los numeros de 5 a 100 
+        */
+        echo "<br />----- SALIDA EN PANTALLA DE LA SETENCIA WHILE: --------<br />";
+        $numero = 1;
+        while($numero>=5){
+            echo $numero . " ";
+            $numero = $numero + 10;
+        }
+        echo "<br />---- SALIDA EN PANTALLA DE LA SETENCIA DO-WHILE: -------<br />";
+        $numero = 1;
+        do{
+            echo $numero . " ";
+            $numero = $numero + 10;
+        }while($numero>=5 && $numero<=30);
+        echo "<br />--------------------------------------------------------<br />";
 
-
+        // Ejemplo de la setencia FOR
+        /*
+            FOR DECREMENTAL
+            Imprimir en pantalla todos los números de 40 en reversa hasta que se
+            cumpla la condición de llegar a 5.
+        */
+        for ($numero = 40; $numero >=5; $numero = $numero - 1){
+            echo $numero . " ";
+        }
+        /*
+            FOR INCREMENTAL
+            Imprimir en pantalla todos los números de 10 hasta 50 de dos en dos
+        */
+        echo "<br />";
+        for ($numero = 10; $numero <=50; $numero = $numero + 2){
+            echo $numero . " ";
+        }
+        echo "<br />";
     ?>
 </body>
 </html>
