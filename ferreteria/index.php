@@ -8,6 +8,8 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap" rel="stylesheet">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.4/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-DQvkBjpPgn7RC31MCQoOeC9TI2kdqa4+BSgNMNj8v77fdC77Kj5zpWFTJaaAoMbC" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.4/dist/js/bootstrap.bundle.min.js" integrity="sha384-YUe2LzesAfftltw+PEaao2tjU/QATaW/rOitAq67e0CT0Zi2VVRL0oC4+gAaeBKu" crossorigin="anonymous"></script>
     </head>
     <body>
         <div id="header">
@@ -16,6 +18,9 @@
                 <h1>FERRETERIA S.A.</h1>
             </div>
             <div class="menu">
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalCotizacion">
+                    Solicitar cotización
+                </button>
                 <a class="menu-item" href="#">Inicio</a>
                 <a class="menu-item" href="productos/productos.html">Productos</a>
                 <a class="menu-item" href="servicios/servicios.html">Servicios</a>
@@ -23,6 +28,39 @@
         </div>
         <br />
         <div id="content">
+            <!-- Cuadros de dialogo -->
+            <div class="modal fade" id="modalCotizacion" tabindex="-1" aria-labelledby="modalCotizacionLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="modalCotizacionLabel">Nueva cotización</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form action="cotizacion.php" method="POST">
+                                <div class="mb-3">
+                                    <label for="nombre" class="form-label">Nombre completo:</label>
+                                    <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Ingrese su nombre">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="telefono" class="form-label">Teléfono:</label>
+                                    <input type="text" class="form-control" id="telefono" name="telefono" placeholder="Ingrese su teléfono">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="correo" class="form-label">Correo electrónico:</label>
+                                    <input type="email" class="form-control" id="correo" name="correo" placeholder="Ingrese su correo electrónico">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="descripcion" class="form-label">Descripción:</label>
+                                    <textarea rows="10" class="form-control" id="descripcion" name="descripcion" placeholder="Ingrese una descripción de lo que necesita..." ></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-primary">Solicitar cotización</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <h2>NUESTRO NEGOCIO:</h2>
             <p>
                 Ferreteria S.A. es una empresa dedicada a la venta de productos de ferreteria, 
