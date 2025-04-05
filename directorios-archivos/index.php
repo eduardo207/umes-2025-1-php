@@ -16,6 +16,8 @@
         echo "<br />Archivo: " . $archivo;
     }
 
+    // Leyendo directorio utilizando opendir y readdir
+
 
 
     // Path de directorio creado
