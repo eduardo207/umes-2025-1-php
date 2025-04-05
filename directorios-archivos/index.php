@@ -17,8 +17,13 @@
     }
 
     // Leyendo directorio utilizando opendir y readdir
+    $directorio = opendir('galeria');
+    do{
+        $archivo = readdir($directorio);
+        echo "<br />Archivo: " . $archivo;
+    }while($archivo);
 
-
+    closedir('galeria');
 
     // Path de directorio creado
     chdir('cotizaciones');
